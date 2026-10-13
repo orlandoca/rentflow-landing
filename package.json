@@ -18,9 +18,11 @@
     "shiki": "^4.5.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@rolldown/binding-win32-x64-msvc": "^1.2.13",
     "@tailwindcss/vite": "^4.3.3",
     "lightningcss-win32-x64-msvc": "^1.33.0",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
   }
 }
