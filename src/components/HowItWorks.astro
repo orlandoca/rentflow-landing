@@ -1,0 +1,61 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Cargá tus inmuebles e inquilinos",
+    desc: "Ingresá tus edificios, departamentos con sus valores de alquiler en Guaraníes y los datos de tus inquilinos con su Cédula de Identidad.",
+    action: "Configuración en 5 minutos"
+  },
+  {
+    num: "02",
+    title: "Generá contratos y pagarés en 1 clic",
+    desc: "El sistema redacta el contrato legal y genera el PDF multipágina con todos los pagarés mensuales foliados y listos para la firma.",
+    action: "Cero errores de redacción"
+  },
+  {
+    num: "03",
+    title: "Cobrá, emití recibos y controlá tu ganancia",
+    desc: "Registrá cobros con recibos oficiales correlativos, avisá por WhatsApp y mirá tu Utilidad Neta real en el panel financiero.",
+    action: "Tranquilidad y orden total"
+  }
+];
+---
+
+<section id="como-funciona" class="py-20 md:py-32 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-xs font-black uppercase tracking-[0.3em] text-blue-400">
+        Paso a Paso
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white mt-3">
+        Cómo funciona <span class="text-blue-500">Rentflow</span>
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4">
+        Diseñado para que cualquier administrador o propietario comience a ordenar su gestión sin curvas de aprendizaje complejas.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      {steps.map((step) => (
+        <div class="relative glass p-8 sm:p-10 rounded-3xl border border-white/[0.08] flex flex-col justify-between group hover:border-blue-500/40 transition-all duration-300">
+          <div>
+            <span class="text-5xl font-black font-display text-blue-500/20 group-hover:text-blue-500/40 transition-colors block mb-4">
+              {step.num}
+            </span>
+            <h3 class="text-xl font-black text-white group-hover:text-blue-400 transition-colors">
+              {step.title}
+            </h3>
+            <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+              {step.desc}
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/[0.06] text-xs font-bold text-slate-300 flex items-center gap-2">
+            <span class="text-blue-400">➔</span> {step.action}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

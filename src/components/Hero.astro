@@ -1,0 +1,98 @@
+---
+const whatsappUrl = "https://wa.me/595985123456?text=Hola!%20Quiero%20iniciar%20mi%20prueba%20gratuita%20de%20Rentflow.";
+---
+
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Columna de Texto -->
+      <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          100% Adaptado al Mercado de Paraguay (Gs.)
+        </div>
+
+        <!-- Headline (Outcome-focused) -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-display tracking-tight text-white uppercase leading-[1.05]">
+          Administrá tus alquileres <span class="bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">sin planillas</span> y generá contratos en segundos
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+          La plataforma para propietarios y administradores en Paraguay: pagarés masivos en PDF, liquidación de expensas por coeficiente y control de utilidad neta en Guaraníes.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-black text-sm uppercase tracking-wider px-8 py-4 rounded-2xl shadow-xl shadow-blue-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 border-t border-white/20 text-center"
+          >
+            Iniciar Prueba Gratuita (30 Días)
+          </a>
+          <a 
+            href="#funcionalidades" 
+            class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-2xl border border-white/[0.08] transition-all text-center"
+          >
+            Conocer Funcionalidades
+          </a>
+        </div>
+
+        <!-- Micro Social Proof -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">✓</span> Sin tarjeta de crédito
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">✓</span> Pagarés y contratos legales en 1 clic
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">✓</span> Recibos numerados (001-0000001)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna Visual (Hero Image / Dashboard Outcome) -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          
+          <!-- Glow de fondo -->
+          <div class="absolute -inset-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
+          
+          <!-- Contenedor con borde y sombra -->
+          <div class="relative rounded-3xl overflow-hidden border border-white/[0.1] bg-slate-900 shadow-2xl">
+            <img 
+              src="/rentflow_hero.png" 
+              alt="Administración moderna de alquileres con Rentflow en Paraguay" 
+              class="w-full h-auto object-cover transform hover:scale-[1.02] transition-transform duration-500"
+              loading="eager"
+            />
+            
+            <!-- Floating Badge Over Image -->
+            <div class="absolute bottom-4 left-4 right-4 glass p-4 rounded-2xl flex items-center justify-between">
+              <div>
+                <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Utilidad Neta del Mes</p>
+                <p class="text-xl font-black text-emerald-400 font-display">Gs. 42.850.000</p>
+              </div>
+              <div class="text-right">
+                <span class="inline-block px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase">
+                  98% Cobrado
+                </span>
+                <p class="text-[10px] text-slate-400 mt-1">100% Automatizado</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

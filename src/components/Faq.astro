@@ -1,0 +1,62 @@
+---
+const faqs = [
+  {
+    q: "¿Rentflow está adaptado a las leyes y formatos de Paraguay?",
+    a: "Totalmente. El sistema opera de forma nativa en Guaraníes (Gs. sin decimales), soporta números de Cédula de Identidad (CI), genera recibos con numeración correlativa auditable (ej: 001-0000001) y redacta contratos con pagarés foliados válidos para la legislación civil paraguaya."
+  },
+  {
+    q: "¿Cómo funciona la generación de pagarés masivos en PDF?",
+    a: "Al formalizar un contrato (por ejemplo a 12 meses), Rentflow genera en 1 solo clic un PDF completo que contiene el contrato legal y los 12 pagarés individuales con sus montos, fechas de vencimiento y datos del inquilino, listos para imprimir o firmar."
+  },
+  {
+    q: "¿Puedo liquidar expensas según el coeficiente de copropiedad?",
+    a: "Sí. Podés registrar el porcentaje de copropiedad de cada departamento y cargar los gastos comunes. El sistema valida matemáticamente que la distribución sea exacta y divide automáticamente gastos ordinarios y extraordinarios."
+  },
+  {
+    q: "¿Cómo ayuda el módulo de cajas con el efectivo?",
+    a: "Permite abrir y cerrar turnos mensuales de cobro. Al cerrar la caja, realizás el arqueo físico contando tus billetes de 100.000, 50.000, 20.000 Gs., etc., y el sistema te alerta al instante si existe algún faltante o sobrante."
+  },
+  {
+    q: "¿Necesito instalar algún software o funciona en la nube?",
+    a: "Es 100% en la nube. Podés ingresar desde tu computadora, notebook, tablet o celular desde cualquier navegador web sin instalar nada."
+  },
+  {
+    q: "¿Qué ocurre cuando finalizan los 30 días de prueba gratuita?",
+    a: "Tus datos quedan guardados y protegidos. Podés elegir el plan que mejor se adapte a la cantidad de tus unidades para continuar sin interrupciones."
+  }
+];
+---
+
+<section id="faq" class="py-20 md:py-32 bg-slate-950/50 relative border-t border-white/[0.06]">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-16">
+      <span class="text-xs font-black uppercase tracking-[0.3em] text-blue-400">
+        Claridad Total
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white mt-3">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4">
+        Todo lo que necesitás saber antes de digitalizar la administración de tus alquileres.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <details class="glass rounded-2xl p-6 border border-white/[0.06] group transition-all duration-200 open:border-blue-500/30">
+          <summary class="font-bold text-base sm:text-lg text-white cursor-pointer list-none flex items-center justify-between gap-4">
+            <span>{faq.q}</span>
+            <span class="text-blue-400 text-xl font-black group-open:rotate-45 transition-transform duration-200 flex-shrink-0">
+              +
+            </span>
+          </summary>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 pt-4 border-t border-white/[0.06] leading-relaxed">
+            {faq.a}
+          </p>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

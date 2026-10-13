@@ -1,0 +1,97 @@
+---
+const pains = [
+  {
+    icon: "❌",
+    title: "El caos de las planillas de Excel",
+    desc: "Celdas borradas sin querer, fórmulas de cobro desfasadas y múltiples versiones del archivo que nadie sabe cuál es la última."
+  },
+  {
+    icon: "❌",
+    title: "Pagarés y contratos hechos a mano",
+    desc: "Horas copiando y pegando números de CI y cláusulas en Word, con alto riesgo de errores tipográficos en montos y fechas."
+  },
+  {
+    icon: "❌",
+    title: "¿Cuánto ganás realmente a fin de mes?",
+    desc: "Ingresos brutos mezclados con reparaciones, expensas impagas y gastos imprevistos. La rentabilidad neta queda en una nebulosa."
+  }
+];
+
+const gains = [
+  {
+    icon: "⚡",
+    title: "Un solo clic, contrato y pagarés listos",
+    desc: "Al crear el contrato, Rentflow autogenera el PDF multipágina con todos los pagarés foliados y listos para firma física o digital."
+  },
+  {
+    icon: "📊",
+    title: "Utilidad Neta calculada en tiempo real",
+    desc: "El sistema deduce automáticamente gastos de mantenimiento, servicios y expensas para mostrarte tus ganancias netas reales en Gs."
+  },
+  {
+    icon: "🛡️",
+    title: "Arqueo de cajas y recibos auditables",
+    desc: "Recibos correlativos oficiales (ej: 001-0000001) y apertura/cierre de caja con conteo de billetes y monedas paraguayas."
+  }
+];
+---
+
+<section id="beneficios" class="py-20 md:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-black uppercase tracking-[0.3em] text-blue-400">
+        Evolución de Gestión
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white mt-3">
+        Dejá de perder tiempo con <span class="text-red-400 line-through">planillas sueltas</span>
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4">
+        Administrar alquileres en Paraguay solía ser un dolor de cabeza administrativo. Rentflow transforma horas de papeleo en clics.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Lado del Dolor (Tradicional) -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-red-950/15 border border-red-500/20 space-y-6">
+        <div class="flex items-center justify-between border-b border-red-500/20 pb-4">
+          <span class="text-xs font-black uppercase tracking-widest text-red-400">Método Tradicional</span>
+          <span class="text-xs text-red-400/80 font-bold">Lento y propenso a errores</span>
+        </div>
+        <div class="space-y-6">
+          {pains.map((item) => (
+            <div class="flex gap-4">
+              <span class="text-xl flex-shrink-0">{item.icon}</span>
+              <div>
+                <h4 class="text-base font-bold text-slate-200">{item.title}</h4>
+                <p class="text-sm text-slate-400 mt-1 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Lado de la Solución (Rentflow) -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-blue-950/20 border border-blue-500/30 space-y-6 shadow-2xl shadow-blue-950/50">
+        <div class="flex items-center justify-between border-b border-blue-500/30 pb-4">
+          <span class="text-xs font-black uppercase tracking-widest text-blue-400">Con Rentflow</span>
+          <span class="text-xs text-emerald-400 font-bold">Rápido, auditable y seguro</span>
+        </div>
+        <div class="space-y-6">
+          {gains.map((item) => (
+            <div class="flex gap-4">
+              <span class="text-xl flex-shrink-0">{item.icon}</span>
+              <div>
+                <h4 class="text-base font-bold text-white">{item.title}</h4>
+                <p class="text-sm text-slate-300 mt-1 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

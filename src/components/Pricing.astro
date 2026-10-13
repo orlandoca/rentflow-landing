@@ -1,0 +1,154 @@
+---
+const whatsappBase = "https://wa.me/595985123456?text=";
+
+const plans = [
+  {
+    name: "BÁSICO",
+    category: "Plan Esencial",
+    badge: "Ideal Dueños Directos",
+    price: "Gs. 145.000",
+    period: "/ mes",
+    recommended: false,
+    whatsappMsg: encodeURIComponent("Hola! Me interesa suscribirme al Plan Básico de Rentflow."),
+    features: [
+      "Hasta 10 Unidades (Deptos/Casas)",
+      "Registro de Inquilinos y Cédula de Identidad",
+      "Gestión de Contratos de Alquiler",
+      "Control de Pagarés Individuales",
+      "Recibos PDF Secuenciales (001-0000001)",
+      "Alertas rápidas por WhatsApp",
+      "Dashboard financiero básico"
+    ]
+  },
+  {
+    name: "ESTÁNDAR",
+    category: "Plan Profesional",
+    badge: "Recomendado",
+    price: "Gs. 350.000",
+    period: "/ mes",
+    recommended: true,
+    whatsappMsg: encodeURIComponent("Hola! Me interesa suscribirme al Plan Estándar (Recomendado) de Rentflow."),
+    features: [
+      "TODO LO DEL PLAN BÁSICO +",
+      "Hasta 120 Unidades e Inmuebles",
+      "Pagarés Masivos en PDF en 1 solo clic",
+      "Recibo de Garantía en 1 clic",
+      "Módulo de Expensas con Coeficiente %",
+      "Control de Cajas y Arqueo en Guaraníes",
+      "Reservas de Áreas Comunes (Quinchos/Piscinas)",
+      "Cálculo automático de Utilidad Neta",
+      "Consolidación e Informes en Excel y PDF"
+    ]
+  },
+  {
+    name: "PREMIUM",
+    category: "Plan Corporativo",
+    badge: "Inmobiliarias & Edificios Grandes",
+    price: "Gs. 750.000",
+    period: "/ mes",
+    recommended: false,
+    whatsappMsg: encodeURIComponent("Hola! Me interesa suscribirme al Plan Premium de Rentflow."),
+    features: [
+      "TODO LO DEL PLAN ESTÁNDAR +",
+      "Unidades e Inmuebles Ilimitados",
+      "Múltiples Cajas Registradoras y Bancos",
+      "Múltiples Usuarios y Roles (Operador / Admin)",
+      "Soporte Prioritario VIP 24/7",
+      "Capacitación de equipo personalizada",
+      "Personalización de plantillas de contrato"
+    ]
+  }
+];
+---
+
+<section id="precios" class="py-20 md:py-32 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-xs font-black uppercase tracking-[0.3em] text-emerald-400">
+        Inversión Transparente
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white mt-3">
+        Planes diseñados para tu <span class="text-emerald-400">escala</span>
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4">
+        Sin costos ocultos ni comisiones por cobro. Precios en Guaraníes para el mercado paraguayo.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      {plans.map((plan) => (
+        <div 
+          class={`glass p-8 sm:p-10 rounded-3xl flex flex-col justify-between relative transition-all duration-300 hover:-translate-y-1 ${
+            plan.recommended 
+              ? "border-emerald-500/40 bg-emerald-950/10 shadow-2xl shadow-emerald-900/20 ring-1 ring-emerald-500/30" 
+              : "border-white/[0.08]"
+          }`}
+        >
+          {plan.recommended && (
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg">
+              Más Elegido
+            </div>
+          )}
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class={`text-[10px] font-black uppercase tracking-widest ${plan.recommended ? "text-emerald-400" : "text-slate-400"}`}>
+                {plan.category}
+              </span>
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider bg-white/[0.05] px-2.5 py-0.5 rounded-full">
+                {plan.badge}
+              </span>
+            </div>
+
+            <h3 class="text-3xl font-black font-display uppercase text-white">
+              {plan.name}
+            </h3>
+
+            <div class="mt-6 mb-8 pb-6 border-b border-white/[0.06]">
+              <span class="text-xs text-slate-400 block font-semibold">Inversión mensual</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class={`text-4xl font-black font-display ${plan.recommended ? "text-emerald-400" : "text-white"}`}>
+                  {plan.price}
+                </span>
+                <span class="text-xs text-slate-400 font-bold">{plan.period}</span>
+              </div>
+            </div>
+
+            <ul class="space-y-3.5 mb-10 text-sm">
+              {plan.features.map((feat) => (
+                <li class="flex items-start gap-3 text-slate-300 leading-snug">
+                  <span class={`font-black flex-shrink-0 mt-0.5 ${plan.recommended ? "text-emerald-400" : "text-blue-400"}`}>
+                    ✓
+                  </span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a 
+            href={`${whatsappBase}${plan.whatsappMsg}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={`w-full py-4 rounded-2xl text-center font-black text-xs uppercase tracking-wider transition-all shadow-lg active:scale-[0.98] ${
+              plan.recommended
+                ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-900/30 border-t border-white/20"
+                : "bg-slate-800 hover:bg-slate-700 text-white border border-white/[0.08]"
+            }`}
+          >
+            {plan.recommended ? "Comenzar Prueba Gratuita" : "Elegir " + plan.name}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Trial Banner below pricing -->
+    <div class="mt-12 text-center">
+      <p class="text-sm text-slate-400">
+        ¿Querés probar antes de decidir? <a href={`${whatsappBase}${encodeURIComponent("Hola! Quiero probar los 30 días gratuitos de Rentflow.")}`} class="text-blue-400 font-bold hover:underline">Iniciá 30 días de prueba gratis completa sin compromiso</a>.
+      </p>
+    </div>
+
+  </div>
+</section>

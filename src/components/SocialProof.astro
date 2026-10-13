@@ -1,0 +1,28 @@
+---
+const stats = [
+  { value: "500+", label: "Unidades Administradas", detail: "Asunción y Gran Asunción" },
+  { value: "Gs. 0", label: "Cero Errores de Moneda", detail: "Formateo nativo paraguayo" },
+  { value: "10 seg", label: "Generación de Contratos", detail: "PDF multipágina listo para firmar" },
+  { value: "100%", label: "Trazabilidad de Cajas", detail: "Arqueo de billetes y monedas Gs." },
+];
+---
+
+<section class="border-y border-white/[0.06] bg-slate-950/60 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/[0.06]">
+      {stats.map((stat) => (
+        <div class="pt-4 lg:pt-0 lg:px-4">
+          <p class="text-3xl sm:text-4xl font-black font-display text-white tracking-tight">
+            {stat.value}
+          </p>
+          <p class="text-sm font-bold text-slate-200 mt-1 uppercase tracking-wide">
+            {stat.label}
+          </p>
+          <p class="text-xs text-slate-400 mt-0.5">
+            {stat.detail}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

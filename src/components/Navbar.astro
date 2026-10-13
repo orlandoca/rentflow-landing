@@ -1,0 +1,60 @@
+---
+const navLinks = [
+  { href: "#beneficios", label: "Beneficios" },
+  { href: "#funcionalidades", label: "Funcionalidades" },
+  { href: "#como-funciona", label: "Cómo funciona" },
+  { href: "#precios", label: "Planes" },
+  { href: "#faq", label: "Preguntas" },
+];
+
+const whatsappUrl = "https://wa.me/595985123456?text=Hola!%20Quiero%20iniciar%20mi%20prueba%20gratuita%20de%20Rentflow.";
+---
+
+<header class="sticky top-0 z-50 bg-[#020617]/75 backdrop-blur-xl border-b border-white/[0.06]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3.5 group">
+      <div class="w-11 h-11 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-blue-600/30 transform -rotate-3 group-hover:rotate-0 transition-transform duration-300 border-t border-white/20">
+        🌊
+      </div>
+      <div>
+        <span class="text-2xl font-black font-display tracking-tight text-white uppercase block leading-none">
+          RENT<span class="text-blue-500">FLOW</span>
+        </span>
+        <span class="block text-[9px] text-slate-400 font-bold uppercase tracking-[0.25em] leading-none mt-1">
+          Paraguay Real Estate
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8 bg-slate-900/60 px-6 py-2.5 rounded-full border border-white/[0.06] text-xs font-bold uppercase tracking-wider">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="text-slate-400 hover:text-white transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- CTAs -->
+    <div class="flex items-center gap-3.5">
+      <a 
+        href="#precios" 
+        class="hidden sm:inline-block text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-colors px-3 py-2"
+      >
+        Ver Planes
+      </a>
+      <a 
+        href={whatsappUrl} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="bg-blue-600 hover:bg-blue-500 text-white rounded-xl px-5 py-2.5 font-bold uppercase text-xs tracking-wider shadow-lg shadow-blue-600/20 transition-all hover:shadow-blue-600/40 border-t border-white/20 active:scale-[0.98]"
+      >
+        Probar Gratis
+      </a>
+    </div>
+  </div>
+</header>

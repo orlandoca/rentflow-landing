@@ -1,0 +1,88 @@
+---
+const features = [
+  {
+    badge: "Documentación Legal",
+    title: "Contratos y Pagarés Masivos en PDF",
+    desc: "Creá un contrato y obtené inmediatamente el archivo completo con todas las cuotas de pagarés correlativas foliadas. Incluye recibo de depósito de garantía en 1 solo clic.",
+    tag: "Ahorrá 4 horas de tipeo por contrato",
+    icon: "📄"
+  },
+  {
+    badge: "Edificios & Copropiedad",
+    title: "Liquidación de Expensas por Coeficiente",
+    desc: "Distribución matemática exacta de gastos ordinarios y extraordinarios según el porcentaje de copropiedad de cada departamento, con validación que impide errores de cálculo.",
+    tag: "Validación matemática al 100%",
+    icon: "🏢"
+  },
+  {
+    badge: "Finanzas & Tesorería",
+    title: "Control de Cajas y Arqueo en Guaraníes",
+    desc: "Apertura y cierre mensual con arqueo físico real discriminado por denominación de billetes y monedas paraguayas (Gs.). Detectá faltantes o sobrantes al instante.",
+    tag: "Trazabilidad bancaria y efectivo",
+    icon: "💰"
+  },
+  {
+    badge: "Convivencia & Amenities",
+    title: "Reservas de Quinchos y Áreas Comunes",
+    desc: "Calendario interactivo para quinchos, piscinas y salones con tarifa por hora en Gs. El sistema bloquea automáticamente horarios superpuestos para evitar roces vecinales.",
+    tag: "Cero reservas superpuestas",
+    icon: "📅"
+  },
+  {
+    badge: "Visión Global",
+    title: "Utilidad Neta Real (Dashboard Pro)",
+    desc: "Visualizá ingresos brutos cobrados vs. egresos de mantenimiento, ANDE y servicios. Sabé exactamente cuánto dinero limpio genera cada edificio y departamento.",
+    tag: "Ingresos - Gastos = Ganancia Neta",
+    icon: "📈"
+  },
+  {
+    badge: "Comunicación Inmediata",
+    title: "Cobros y Avisos por WhatsApp",
+    desc: "Enviá recordatorios de vencimiento, confirmaciones de pago y recibos oficiales directamente al WhatsApp del inquilino sin cargar números a tu agenda personal.",
+    tag: "Cobranza ágil y respetuosa",
+    icon: "💬"
+  }
+];
+---
+
+<section id="funcionalidades" class="py-20 md:py-32 bg-slate-950/40 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-xs font-black uppercase tracking-[0.3em] text-blue-400">
+        Potencia Operativa
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black font-display uppercase tracking-tight text-white mt-3">
+        Todo lo que necesitás para <span class="text-blue-500">profesionalizar</span> tus alquileres
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4">
+        Diseñado específicamente para las exigencias legales, comerciales y financieras de Paraguay.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feat) => (
+        <div class="glass p-8 rounded-3xl flex flex-col justify-between hover:border-blue-500/30 transition-all duration-300 group hover:-translate-y-1">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-3xl">{feat.icon}</span>
+              <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                {feat.badge}
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-white group-hover:text-blue-400 transition-colors">
+              {feat.title}
+            </h3>
+            <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+              {feat.desc}
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] flex items-center gap-2 text-xs font-bold text-slate-300">
+            <span class="text-emerald-400">✓</span> {feat.tag}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
